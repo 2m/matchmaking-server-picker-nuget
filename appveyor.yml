@@ -1,0 +1,19 @@
+version: 1.0.{build}
+environment:
+  choco_api_key:
+    secure: XRbRwsYUh1rc3yuf9ZED76R8OgeKCGRSuD0pY0JClhuTOTOJERe7wJKxihWr+8/9
+build: off
+test_script:
+- ps: >-
+    choco pack
+
+    choco install matchmaking-server-picker -s "$pwd" -f
+deploy:
+- provider: Local
+  on:
+    appveyor_repo_tag: true
+after_deploy:
+- ps: >-
+    choco apikey -k $env:choco_api_key -source https://chocolatey.org/
+
+    choco push matchmaking-server-picker.4.5.nupkg -s https://chocolatey.org/

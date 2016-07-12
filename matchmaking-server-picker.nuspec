@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>matchmaking-server-picker</id>
+    <title>Matchmaking Server Picker</title>
+    <version>4.5</version>
+    <authors>http://gamebanana.com/members/490570</authors>
+    <owners>https://github.com/2m</owners>
+    <summary>Control access to Counter Strike: Global Offensive Matchmaking servers by region</summary>
+    <description>
+      This program can be useful for:
+        * people who don't want to play on the Russian servers, and rather play on the EU West servers where more people speak English and there are far less Russians (Russians get close to 100ms on EU West).
+        * mm_dedicated_search_maxping doesn't work for some people and that is causing them to connect to high ping servers even when they have it set to low values. Using this program you can see the ping of all the servers and select which one has the lowest ping for you.
+        * players living in South America who aren't Brazilian, and want to play with people who speak English on the American servers.
+        * Australian players who want to play at down time and can't find any games. They can block the Aus servers and play on the Asian ones (they'll get around 100ms though).
+        * people in India and UAE and other countries who want to play on other servers rather than play on the hackfest that is the Dubai servers, you can block Dubai using this program. (valve locks you to the Dubai servers if you have under 80ms ping to them).
+        * people in India and other countries who want to play on the Asian Servers (which take shorter to find a match on), instead of playing on the Indian servers. (valve also locks you to the Indian servers if you have under 80ms ping to them).
+      and many more!
+    </description>
+    <projectUrl>http://gamebanana.com/tools/5684</projectUrl>
+    <packageSourceUrl>https://github.com/2m/matchmaking-server-picker-nuget</packageSourceUrl>
+    <tags>csgo matchmaking server firewall</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://media.steampowered.com/apps/730/icons/community_support_pass_coin3_large.c3afe0cfbd929f85fca1a63ec1815e8336dcfe7d.png</iconUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
